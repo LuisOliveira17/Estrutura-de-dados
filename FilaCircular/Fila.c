@@ -8,7 +8,6 @@ int fila [TAMANHO];
 int posicao = 0;
 int inicio = 0;
 int fim=0;
-bool vazia=true;
 
 bool push (int valor) {
     if (inicio==0 && fim==TAMANHO||(fim+1==inicio)) { //Verifica se está cheia

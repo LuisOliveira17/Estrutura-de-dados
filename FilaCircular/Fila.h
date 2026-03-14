@@ -6,7 +6,7 @@
 #define AULA0703_FILA_H
 #include <stdbool.h>
 enum {
-    TAMANHO = 5
+    TAMANHO = 4
 };
 
 extern int fila [TAMANHO];

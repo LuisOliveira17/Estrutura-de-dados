@@ -23,7 +23,7 @@ int main(void) {
                 printf("Digite um numero: ");
                 scanf("%d",&num);
                 if (!push(num)) {
-                    printf("FILA CHEIA");
+                    printf("FILA CHEIA\n");
                 }
                 listar();
                 break;

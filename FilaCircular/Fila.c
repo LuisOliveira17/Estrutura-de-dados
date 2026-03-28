@@ -36,5 +36,6 @@ bool pop (int *valor) {
 
     }
 
+
     return true;
 }

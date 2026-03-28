@@ -31,6 +31,9 @@ int main(void) {
                 if (pop(&num)) {
                     printf("ITEM %d RETIRADO\n",num);
                 }
+                else{
+                    printf("FILA VAZIA\n");
+                }
                 listar();
                 break;
             case OP_SAIR:

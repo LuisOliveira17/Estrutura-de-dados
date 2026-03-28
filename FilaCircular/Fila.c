@@ -33,6 +33,7 @@ bool pop (int *valor) {
         inicio = 0;
     } else {
         inicio++;
+
     }
 
     return true;

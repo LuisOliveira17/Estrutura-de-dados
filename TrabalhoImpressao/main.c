@@ -37,7 +37,7 @@ int main(void) {
                 scanf("%d",&novoTrabalho.num_paginas);
 
                 adiciona_trabalho(novoTrabalho);
-
+                listar();
                 break;
             }
 
@@ -48,6 +48,8 @@ int main(void) {
                 TrabalhoImpressao trabalhoRetirado;
                 processa_proximo_trabalho(&trabalhoRetirado);
                 printf("TRABALHO RETIRADO\nID:%d",trabalhoRetirado.id);
+                printf("\n");
+                listar();
                 break;
             }
         }
@@ -58,9 +60,9 @@ int main(void) {
 int menu() {
     int op=0;
     printf("\nMenu:\n");
-    printf("%d ADICIONAR",OP_ADICIONA_TRABALHO);
-    printf("%d PROCESSAR TRABALHO", OP_PROCESSA_TRABALHO);
-    printf("%d SAIR",OP_SAIR);
+    printf("%d ADICIONAR\n",OP_ADICIONA_TRABALHO);
+    printf("%d PROCESSAR TRABALHO\n", OP_PROCESSA_TRABALHO);
+    printf("%d SAIR\n",OP_SAIR);
     printf("--------------------\n");
     printf("Escolha:");
     scanf("%d",&op);
@@ -69,5 +71,15 @@ int menu() {
 }
 
 int listar() {
+        int i = inicio;
+        while (i != fim) {
+            printf("[%s] ", filaImpressao[i].nome_arquivo);
 
-}
+            if (i == TAMANHO) {
+                i = 0;
+            } else {
+                i++;
+            }
+        }
+        printf("\n");
+    }
